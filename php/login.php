@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($user['role'] == 'admin' || $user['role'] == 'manager') {
                 header("Location: http://localhost/Employee%20Management%20System/html&css/pages/dashboard/dashboard.html");
             } else if ($user['role'] == 'employee') {
-                header("Location: http://localhost/Employee%20Management%20System/html&css/pages/Clock-in-out.html");
+                header("Location: http://localhost/Employee%20Management%20System/html&css/pages/Clock-in-out.php");
             }
             exit();
         } else {
