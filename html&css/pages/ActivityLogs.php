@@ -4,36 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- Primary Meta Tags -->
-    <title>Volt Free Bootstrap Dashboard - Bootstrap Tables</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="title" content="Volt Free Bootstrap Dashboard - Bootstrap Tables">
-    <meta name="author" content="Themesberg">
-    <meta name="description" content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
-    <meta name="keywords" content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, themesberg, themesberg dashboard, themesberg admin dashboard" />
-    <link rel="canonical" href="https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://demo.themesberg.com/volt-pro">
-    <meta property="og:title" content="Volt Free Bootstrap Dashboard - Bootstrap Tables">
-    <meta property="og:description" content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
-    <meta property="og:image" content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-pro-bootstrap-5-dashboard/volt-pro-preview.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://demo.themesberg.com/volt-pro">
-    <meta property="twitter:title" content="Volt Free Bootstrap Dashboard - Bootstrap Tables">
-    <meta property="twitter:description" content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
-    <meta property="twitter:image" content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-pro-bootstrap-5-dashboard/volt-pro-preview.jpg">
-
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="120x120" href="../../assets/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="../../assets/img/favicon/site.webmanifest">
-    <link rel="mask-icon" href="../../assets/img/favicon/safari-pinned-tab.svg" color="#ffffff">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="theme-color" content="#ffffff">
+    <title>Admin Activity Logs</title>
 
     <!-- Sweet Alert -->
     <link type="text/css" href="../../vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
@@ -44,7 +15,6 @@
     <!-- Volt CSS -->
     <link type="text/css" href="../css/volt.css" rel="stylesheet">
 
-    <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
     <style>
         .navbar-brand,
         .text-primary {
@@ -65,18 +35,8 @@
             background: linear-gradient(180deg, #141318, #252526) !important;
         }
 
-        .navbar-brand,
-        .text-primary {
-            color: #cecdd2 !important;
-        }
-
         header {
             background: linear-gradient(180deg, #141318, #252526);
-        }
-
-        .nav-link {
-            font-weight: 500;
-            color: #cecdd2;
         }
 
         .btn-primary {
@@ -115,10 +75,6 @@
 
         .lead {
             color: #cecdd2;
-        }
-
-        .text-primary {
-            color: goldenrod !important;
         }
 
         .icons {
@@ -224,10 +180,6 @@
             font-weight: 600;
         }
 
-        .py-3 {
-            background: linear-gradient(180deg, #141318, #252526);
-        }
-
         .services-section {
             background-color: #f9f9f9;
             padding: 40px 0;
@@ -267,15 +219,6 @@
             background-color: gold;
         }
 
-        .icons {
-            height: 32px;
-            width: 32px;
-            margin-bottom: 16px;
-            color: goldenrod;
-            background-color: #252526;
-            padding: 6px;
-        }
-
         .font-black {
             color: #252526;
         }
@@ -300,20 +243,9 @@
 
     <nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse" data-simplebar>
         <div class="sidebar-inner px-4 pt-3">
-            <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
-                <div class="d-flex align-items-center">
-                </div>
-                <div class="collapse-close d-md-none">
-                    <a href="#sidebarMenu" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true" aria-label="Toggle navigation">
-                        <svg class="icon icon-xs" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                        </svg>
-                    </a>
-                </div>
-            </div>
             <ul class="nav flex-column pt-3 pt-md-0">
                 <li class="nav-item">
-                    <a href="../../index.html" class="nav-link d-flex align-items-center">
+                    <a href="../../html&css/pages/index.html" class="nav-link d-flex align-items-center">
                         <span class="mt-1 ms-1 sidebar-text">Diamond Essence Eatery</span>
                     </a>
                 </li>
@@ -334,14 +266,13 @@
                                 <span class="sidebar-icon">
                                     <svg class="icon icon-xs me-2" fill="currentColor" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125"></path>
-                                    </svg>
                                 </span>
                             </span>
                             <span class="sidebar-text">Edit Employee</span>
                         </span>
                     </a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a href="../../html&css/pages/ActivityLogs.html" class="nav-link">
                         <span class="sidebar-icon">
                             <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -390,99 +321,176 @@
     </nav>
 
     <main class="content">
-
         <header>
             <section>
                 <div class="container pt-5">
                     <div class="row align-items-center justify-content-center">
                         <div class="col-12 col-lg-6">
-                            <h1 class="display-4 fw-bold"><span class="font-goldenrod">Diamond Essence Eatery </span>Employee Reports</h1>
+                            <h1 class="display-4 fw-bold"><span class="font-goldenrod">Diamond Essence Eatery </span>Activity Dashboard</h1>
                             <p class="lead pd-4 pt-2">
-                                Access and print detailed reports of employee clock-ins and clock-outs to track attendance and monitor working hours effectively.
+                                Track user logins, clock-ins, and administrative updates in real-time for streamlined oversight and control.
                             </p>
                         </div>
-
                         <div class="col-20 col-lg-5 mb-4">
-                            <img src="../../src/assets/img/papers.jpg" alt="Reports" class="img-fluid">
+                            <img src="../../src/assets/img/pages/clicking.jpg" alt="Plate of food" class="img-fluid">
                         </div>
                     </div>
-                </div>
             </section>
         </header>
 
         <div class="container my-4">
-            <h2 class="mb-3">Employee Management</h2>
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Surname</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="employeeTableBody">
-                    <!-- Data will be dynamically filled here -->
-                </tbody>
-            </table>
-        </div>
+            <h2 class="mb-3">Activity Logs</h2>
 
-        <!-- Modify Popup -->
-        <div id="modifyPopup" class="popup">
-            <div class="close-btn">&times;</div>
-            <div class="form">
-                <h2>Modify Employee</h2>
-                <div class="form-element">
-                    <label for="modifyName">Name</label>
-                    <input type="text" id="modifyName" placeholder="Enter name">
+            <!-- PHP Database Connection and Queries -->
+            <?php
+            // Database connection
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "employee_management";
+
+            // Create connection
+            $conn = new mysqli($servername, $username, $password, $dbname);
+
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            // Fetch last 5 logins and logouts
+            $loginsLogoutsSql = "SELECT user, action, time FROM logins_logouts ORDER BY time DESC LIMIT 5";
+            $loginsLogoutsResult = $conn->query($loginsLogoutsSql);
+
+            // Fetch last 5 clock ins and outs with employee names
+            $clockInOutsSql = "SELECT e.name, e.surname, cr.action, cr.timestamp 
+                               FROM clock_records cr 
+                               JOIN employees e ON cr.user_id = e.id 
+                               ORDER BY cr.timestamp DESC LIMIT 5";
+            $clockInOutsResult = $conn->query($clockInOutsSql);
+
+            // Fetch last 5 administrative changes
+            $adminChangesSql = "SELECT admin, change_made, time FROM admin_changes ORDER BY time DESC LIMIT 5";
+            $adminChangesResult = $conn->query($adminChangesSql);
+            ?>
+
+            <!-- Logins and Logouts Table -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Logins and Logouts</h6>
                 </div>
-                <div class="form-element">
-                    <label for="modifySurname">Surname</label>
-                    <input type="text" id="modifySurname" placeholder="Enter surname">
-                </div>
-                <div class="form-element">
-                    <label for="modifyRole">Role</label>
-                    <input type="text" id="modifyRole" placeholder="Enter role" autocomplete="off">
-                </div>
-                <div class="form-element">
-                    <label for="modifyGender">Gender</label>
-                    <select id="modifyGender">
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                    </select>
-                </div>
-                <div class="form-element">
-                    <label for="modifyAge">Age</label>
-                    <input type="number" id="modifyAge" placeholder="Enter age">
-                </div>
-                <div class="form-element">
-                    <label for="modifyPhone">Phone Number</label>
-                    <input type="tel" id="modifyPhone" placeholder="Enter phone number">
-                </div>
-                <div class="form-element">
-                    <label for="modifyEmail">Email</label>
-                    <input type="text" id="modifyEmail" placeholder="Enter email">
-                </div>
-                <div class="form-element">
-                    <label for="modifyUsername">Username</label>
-                    <input type="text" id="modifyUsername" placeholder="Enter username">
-                </div>
-                <div class="form-element">
-                    <label for="modifyPassword">Password</label>
-                    <input type="text" id="modifyPassword" placeholder="Generated password">
-                    <button type="button" id="generateModifyPasswordBtn">Generate Password</button>
-                </div>
-                <div class="form-element">
-                    <button id="saveChangesBtn" class="btn btn-primary">Save Changes</button>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="loginsLogoutsTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>User</th>
+                                    <th>Action</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                if ($loginsLogoutsResult->num_rows > 0) {
+                                    while ($row = $loginsLogoutsResult->fetch_assoc()) {
+                                        echo "<tr>";
+                                        echo "<td>" . $row["user"] . "</td>";
+                                        echo "<td>" . $row["action"] . "</td>";
+                                        echo "<td>" . $row["time"] . "</td>";
+                                        echo "</tr>";
+                                    }
+                                } else {
+                                    echo "<tr><td colspan='3'>No recent logins or logouts found.</td></tr>";
+                                }
+                                ?>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
+
+            <!-- Clock Ins and Outs Table -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Clock Ins and Outs</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="clockInOutsTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>User</th>
+                                    <th>Action</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                if ($clockInOutsResult->num_rows > 0) {
+                                    while ($row = $clockInOutsResult->fetch_assoc()) {
+                                        echo "<tr>";
+                                        echo "<td>" . $row["name"] . " " . $row["surname"] . "</td>";
+                                        echo "<td>" . $row["action"] . "</td>";
+                                        echo "<td>" . $row["timestamp"] . "</td>";
+                                        echo "</tr>";
+                                    }
+                                } else {
+                                    echo "<tr><td colspan='3'>No recent clock ins or outs found.</td></tr>";
+                                }
+                                ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Administrative Changes Table -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Administrative Changes</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="adminChangesTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Admin</th>
+                                    <th>Change Made</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                if ($adminChangesResult->num_rows > 0) {
+                                    while ($row = $adminChangesResult->fetch_assoc()) {
+                                        echo "<tr>";
+                                        echo "<td>" . $row["admin"] . "</td>";
+                                        echo "<td>" . $row["change_made"] . "</td>";
+                                        echo "<td>" . $row["time"] . "</td>";
+                                        echo "</tr>";
+                                    }
+                                } else {
+                                    echo "<tr><td colspan='3'>No recent administrative changes found.</td></tr>";
+                                }
+                                ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <?php
+            // Close connection
+            $conn->close();
+            ?>
         </div>
 
-        <footer class="py-3 mt-auto">
-            <div class="container">
-                <p class="text-center text-primary">© 2024 Diamond Essence Eatery</p>
-            </div>
+        <footer>
+            <footer class="py-3 mt-auto">
+                <div class="container">
+                    <p class="text-center text-primary">© 2024 Diamond Essence Eatery</p>
+                </div>
+            </footer>
         </footer>
-
     </main>
 
     <!-- Core -->
@@ -510,9 +518,6 @@
 
     <!-- Moment JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-
-    <!-- Vanilla JS Datepicker -->
-    <script src="../../vendor/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
 
     <!-- Notyf -->
     <script src="../../vendor/notyf/notyf.min.js"></script>
@@ -545,79 +550,6 @@
         }
 
         setActiveNavItem();
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            let employees = [
-                { id: 1, name: 'John', surname: 'Doe', username: 'john.doe', gender: 'Male', age: 39, phone: '1234567890', email: 'john@example.com', role: 'Manager', password: 'pass1234' },
-                { id: 2, name: 'Jane', surname: 'Smith', username: 'jane.smith', gender: 'Female', age: 34, phone: '1234567890', email: 'jane@example.com', role: 'Chef', password: 'pass1234' },
-                { id: 3, name: 'Mike', surname: 'Johnson', username: 'mike.johnson', gender: 'Male', age: 36, phone: '1234567890', email: 'mike@example.com', role: 'Waiter', password: 'pass1234' }
-            ];
-
-            const tableBody = document.getElementById('employeeTableBody');
-            function updateTable() {
-                tableBody.innerHTML = ''; // Clear the table first
-                employees.forEach(employee => {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${employee.name}</td>
-                        <td>${employee.surname}</td>
-                        <td>
-                            <button class="btn btn-warning btn-sm" onclick="showModifyPopup(${employee.id})">Modify</button>
-                            <button class="btn btn-danger btn-sm" onclick="deleteEmployee(${employee.id})">Delete</button>
-                        </td>
-                    `;
-                    tableBody.appendChild(row);
-                });
-            }
-
-            window.showModifyPopup = function (id) {
-                const employee = employees.find(e => e.id === id);
-                document.getElementById('modifyName').value = employee.name;
-                document.getElementById('modifySurname').value = employee.surname;
-                document.getElementById('modifyRole').value = employee.role;
-                document.getElementById('modifyGender').value = employee.gender;
-                document.getElementById('modifyAge').value = employee.age;
-                document.getElementById('modifyPhone').value = employee.phone;
-                document.getElementById('modifyEmail').value = employee.email;
-                document.getElementById('modifyUsername').value = employee.username;
-                document.getElementById('modifyPassword').value = employee.password;
-                document.getElementById('modifyPopup').classList.add('active');
-            };
-
-            window.deleteEmployee = function (id) {
-                employees = employees.filter(e => e.id !== id);
-                updateTable();
-            };
-
-            document.getElementById('saveChangesBtn').addEventListener('click', function () {
-                const employee = employees.find(e => e.id === parseInt(document.getElementById('modifyId').value));
-                employee.name = document.getElementById('modifyName').value;
-                employee.surname = document.getElementById('modifySurname').value;
-                employee.role = document.getElementById('modifyRole').value;
-                employee.gender = document.getElementById('modifyGender').value;
-                employee.age = document.getElementById('modifyAge').value;
-                employee.phone = document.getElementById('modifyPhone').value;
-                employee.email = document.getElementById('modifyEmail').value;
-                employee.username = document.getElementById('modifyUsername').value;
-                employee.password = document.getElementById('modifyPassword').value;
-                document.getElementById('modifyPopup').classList.remove('active');
-                updateTable();
-            });
-
-            document.querySelector('.close-btn').addEventListener('click', function () {
-                document.getElementById('modifyPopup').classList.remove('active');
-            });
-
-            // Password generator
-            document.getElementById('generateModifyPasswordBtn').addEventListener('click', function () {
-                var randomPassword = Math.random().toString(36).slice(-8);
-                document.getElementById('modifyPassword').value = randomPassword;
-            });
-
-            // Initial table update
-            updateTable();
-        });
     </script>
 </body>
 

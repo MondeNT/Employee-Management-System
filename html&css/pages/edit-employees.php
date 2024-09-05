@@ -63,7 +63,6 @@
         .navbar,
         .bg-gray-800 {
             background: linear-gradient(180deg, #141318, #252526) !important;
-            /* Applies the gradient background */
         }
 
         .navbar-brand,
@@ -109,13 +108,9 @@
         .display-4 {
             color: #cecdd2;
             font-size: 2.5rem;
-            /* Adjust font size as needed */
             font-weight: bold;
-            /* Adjust font weight as needed */
             text-align: center;
-            /* Center align the "Log in" header */
             margin-bottom: 20px;
-            /* Add some bottom margin for spacing */
         }
 
         .lead {
@@ -146,16 +141,19 @@
             background: #fff;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
             border-radius: 10px;
-            transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms, transform 200ms ease-in-out 0ms;
+            transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
             z-index: 1000;
-            /* Ensure the popup is above other content */
         }
 
         .popup.active {
             top: 70%;
             opacity: 1;
             transform: translate(-50%, -50%) scale(1);
-            transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms, transform 200ms ease-in-out 0ms;
+            transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
         }
 
         .popup .close-btn {
@@ -174,18 +172,13 @@
 
         .popup .form {
             text-align: left;
-            /* Align form elements to the left */
         }
 
         .popup .form h2 {
             font-size: 2rem;
-            /* Adjust font size of the form header */
             color: #222;
-            /* Form header text color */
             text-align: center;
-            /* Center align the "Log in" header */
             margin-bottom: 20px;
-            /* Add some bottom margin for spacing */
         }
 
         .popup .form .form-element {
@@ -197,7 +190,6 @@
             color: #222;
             display: inline-block;
             width: 100px;
-            /* Adjust width as needed */
         }
 
         .popup .form .form-element input[type="text"],
@@ -288,29 +280,61 @@
             color: #252526;
         }
 
-        .nav-item.active .nav-link {
+        .nav-link.active,
+        .nav-link:hover {
             color: goldenrod !important;
         }
 
-        .nav-item.active .sidebar-icon svg {
+        .nav-item .nav-link.active {
+            background-color: transparent !important;
+        }
+
+        .nav-item.active .nav-link {
+            background-color: #1b1c1f !important;
             color: goldenrod !important;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+    }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 40%;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
         }
     </style>
-
 </head>
-
 <body>
-
-    <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
-
-
 
     <nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse" data-simplebar>
         <div class="sidebar-inner px-4 pt-3">
             <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
                 <div class="d-flex align-items-center">
-
-
                 </div>
                 <div class="collapse-close d-md-none">
                     <a href="#sidebarMenu" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true" aria-label="Toggle navigation">
@@ -322,8 +346,7 @@
             </div>
             <ul class="nav flex-column pt-3 pt-md-0">
                 <li class="nav-item">
-                    <a href="../../html&css/pages/index.html" class="nav-link d-flex align-items-center">
-
+                    <a href="../../index.html" class="nav-link d-flex align-items-center">
                         <span class="mt-1 ms-1 sidebar-text">Diamond Essence Eatery</span>
                     </a>
                 </li>
@@ -338,7 +361,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="kanban.html" target="_blank" class="nav-link d-flex justify-content-between">
+                    <a href="../../html&css/pages/edit-employees.html" target="_blank" class="nav-link d-flex justify-content-between">
                         <span>
                             <span class="sidebar-icon">
                                 <span class="sidebar-icon">
@@ -346,14 +369,12 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125"></path>
                                     </svg>
                                 </span>
-
                             </span>
                             <span class="sidebar-text">Edit Employee</span>
                         </span>
-
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a href="../../html&css/pages/ActivityLogs.html" class="nav-link">
                         <span class="sidebar-icon">
                             <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -375,7 +396,7 @@
                         <span class="sidebar-text">Statistics</span>
                     </a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a href="../../html&css/pages/Employees.html" class="nav-link">
                         <span class="sidebar-icon">
                             <span class="sidebar-icon">
@@ -383,7 +404,6 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z"></path>
                                 </svg>
                             </span>
-
                         </span>
                         <span class="sidebar-text">Current Employees</span>
                     </a>
@@ -402,117 +422,145 @@
         </div>
     </nav>
 
-
     <main class="content">
 
         <header>
-
-
             <section>
                 <div class="container pt-5">
                     <div class="row align-items-center justify-content-center">
                         <div class="col-12 col-lg-6">
-                            <h1 class="display-4 fw-bold"><span class="font-goldenrod">Diamond Essence Eatery </span>Current Employees</h1>
+                            <h1 class="display-4 fw-bold"><span class="font-goldenrod">Diamond Essence Eatery </span>Employee Reports</h1>
                             <p class="lead pd-4 pt-2">
-                                View and manage current employees, including their details and reports, here.
+                                Access and print detailed reports of employee clock-ins and clock-outs to track attendance and monitor working hours effectively.
                             </p>
                         </div>
 
                         <div class="col-20 col-lg-5 mb-4">
-                            <img src="../../src/pages/employeesWorking.webp" alt="Plate of food" class="img-fluid">
+                            <img src="../../src/assets/img/papers.jpg" alt="Reports" class="img-fluid">
                         </div>
-
                     </div>
+                </div>
             </section>
         </header>
 
-        <div class="card border-0 shadow mb-4">
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-centered table-nowrap mb-0 rounded">
-                        <thead class="thead-light">
-                            <tr>
-                                <th class="border-0 rounded-start">Name</th>
-                                <th class="border-0">Surname</th>
-                                <th class="border-0">Role</th>
-                                <th class="border-0">Age</th>
-                                <th class="border-0">Phone Number</th>
-                                <th class="border-0">Email</th>
+        <div class="container my-4">
+            <h2 class="mb-3">Employee Management</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+        <!-- Custom Confirmation Dialog -->
+        <div id="confirmDialog" class="modal">
+        <div class="modal-content">
+            <p>Are you sure you want to delete this employee?</p>
+            <button id="confirmYes" class="btn btn-danger btn-sm">Yes</button>
+            <button id="confirmNo" class="btn btn-secondary btn-sm">No</button>
+        </div>
+        </div>
+                <tbody id="employeeTableBody">
+                    <?php
+                    // Database connection
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "employee_management";
+                
+                    $conn = new mysqli($servername, $username, $password, $dbname);
+                
+                    // Check connection
+                    if ($conn->connect_error) {
+                        die("Connection failed: " . $conn->connect_error);
+                    }
+                
+                    // SQL query to retrieve User ID, name, surname, and Gmail email addresses
+                    $sql = "SELECT user_id, name, surname, email FROM employees";
+                    $result = $conn->query($sql);
+                
+                    // Check if query was successful
+                    if ($result === false) {
+                        die("Error: " . $conn->error);
+                    }
+                
+                    if ($result->num_rows > 0) {
+                        echo "Number of rows: " . $result->num_rows . "<br>";
+                        while ($row = $result->fetch_assoc()) {
+                            echo '<tr>';
+                            echo '<td>' . $row["user_id"] . '</td>';
+                            echo '<td>' . $row["name"] . '</td>';
+                            echo '<td>' . $row["surname"] . '</td>';
+                            echo '<td>' . $row["email"] . '</td>';
+                            echo '<td><a href="update_employee.php?id=' . $row["user_id"] . '" class="btn btn-primary btn-sm">Edit</a></td>';
+                            echo '<td><a href="#" class="btn btn-danger btn-sm" onclick="return confirmDelete(\'delete_employee.php?id=' . $row["user_id"] . '\');">Delete</a></td>';
+                            echo '</tr>';
+                        }
+                    } else {
+                        echo "<tr><td colspan='5'>No records found.</td></tr>";
+                    }
+                    $conn->close(); 
+                    ?>
+                </tbody>
+                <script type="text/javascript">
+        function confirmDelete() {
+            return confirm("Are you sure you want to delete this employee?");
+        }
+        </script>
+                
+            </table>
+        </div>
 
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Item -->
-                            <tr>
-                                <td class="text-primary fw-bold">John</td>
-                                <td class="text-primary fw-bold">Doe</td>
-                                <td>Manager</td>
-                                <td>35</td>
-                                <td>123-456-7890</td>
-                                <td>john.doe@example.com</td>
+        <!-- Modify Popup Modal -->
+    <div id="modifyPopup" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <form id="modifyForm">
+            <input type="hidden" id="modifyUserId" name="user_id">
+            <label for="modifyName">Name:</label>
+            <input type="text" id="modifyName" name="name" required>
 
-                            </tr>
-                            <!-- End of Item -->
+            <label for="modifySurname">Surname:</label>
+            <input type="text" id="modifySurname" name="surname" required>
 
-                            <!-- Item -->
-                            <tr>
-                                <td class="text-primary fw-bold">Jane</td>
-                                <td class="text-primary fw-bold">Smith</td>
-                                <td>Developer</td>
-                                <td>28</td>
-                                <td>987-654-3210</td>
-                                <td>jane.smith@example.com</td>
+            <label for="modifyEmail">Email:</label>
+            <input type="email" id="modifyEmail" name="email" required>
 
-                            </tr>
-                            <!-- End of Item -->
-                        </tbody>
-                    </table>
-                    <div class="card-footer px-3 border-0 d-flex flex-column flex-lg-row align-items-center justify-content-between">
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination mb-0">
-                                <li class="page-item">
-                                    <a class="page-link" href="#">Previous</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">1</a>
-                                </li>
-                                <li class="page-item active">
-                                    <a class="page-link" href="#">2</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">3</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">4</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">5</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">Next</a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <div class="fw-normal small mt-4 mt-lg-0">Showing <b>5</b> out of <b>25</b> entries</div>
-                    </div>
-                    <div class="card-footer px-3 border-0 d-flex flex-column flex-lg-row align-items-center justify-content-between">
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination mb-0">
-                                <li class="page-item">
+            <label for="modifyRole">Role:</label>
+            <input type="text" id="modifyRole" name="role" required>
+
+            <label for="modifyGender">Gender:</label>
+            <input type="text" id="modifyGender" name="gender" required>
+
+            <label for="modifyAge">Age:</label>
+            <input type="number" id="modifyAge" name="age" required>
+
+            <label for="modifyPhone">Phone:</label>
+            <input type="text" id="modifyPhone" name="phone" required>
+
+            <label for="modifyUsername">Username:</label>
+            <input type="text" id="modifyUsername" name="username" required>
+
+            <label for="modifyPassword">Password:</label>
+            <input type="password" id="modifyPassword" name="password">
+
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+            <button type="button" class="close-btn">Cancel</button>
+        </form>
+    </div>
+</div>
 
 
-
-                                    <!-- End of Item -->
-
-                                    <!-- Item -->
-
-
-                                    <!-- Item -->
-
-
+        <footer class="py-3 mt-auto">
+            <div class="container">
+                <p class="text-center text-primary">© 2024 Diamond Essence Eatery</p>
+            </div>
+        </footer>
 
     </main>
-
 
     <!-- Core -->
     <script src="../../vendor/@popperjs/core/dist/umd/popper.min.js"></script>
@@ -555,7 +603,156 @@
     <!-- Volt JS -->
     <script src="../../assets/js/volt.js"></script>
 
+    <script>
+        // Function to add active class based on current page
+        function setActiveNavItem() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const currentPage = window.location.pathname.split('/').pop();
 
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('href').split('/').pop();
+                if (linkPage === currentPage) {
+                    link.classList.add('active');
+                    link.closest('.nav-item').classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                    link.closest('.nav-item').classList.remove('active');
+                }
+            });
+        }
+
+        setActiveNavItem();
+    </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const tableBody = document.getElementById('employeeTableBody');
+    const modifyPopup = document.getElementById('modifyPopup');
+    const closeBtn = document.querySelector('.close-btn');
+
+    // Function to update the table with employee data
+    function updateTable(employees) {
+        tableBody.innerHTML = ''; // Clear the table first
+        employees.forEach(employee => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${employee.id}</td>
+                <td>${employee.name}</td>
+                <td>${employee.surname}</td>
+                <td>${employee.email}</td>
+                <td>
+                    <button class="btn btn-warning btn-sm" onclick="showModifyPopup(${employee.id})">Modify</button>
+                    <button class="btn btn-danger btn-sm" onclick="deleteEmployee(${employee.id})">Delete</button>
+                </td>
+            `;
+            tableBody.appendChild(row);
+        });
+    }
+
+    // Function to fetch all employees and update the table
+    function fetchAllEmployees() {
+        fetch(`get_employee.php`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.length > 0) {
+                    updateTable(data);
+                } else {
+                    tableBody.innerHTML = '<tr><td colspan="5">No employees found</td></tr>';
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    // Function to show the modify popup and populate the form with employee data
+    window.showModifyPopup = function (id) {
+        fetch(`get_employee_by_id.php?id=${id}`)
+            .then(response => response.json())
+            .then(employee => {
+                if (employee) {
+                    // Populate the form with employee data
+                    document.getElementById('modifyUserId').value = employee.user_id;
+                    document.getElementById('modifyName').value = employee.name;
+                    document.getElementById('modifySurname').value = employee.surname;
+                    document.getElementById('modifyGender').value = employee.gender;
+                    document.getElementById('modifyAge').value = employee.age;
+                    document.getElementById('modifyPhone').value = employee.phone;
+                    document.getElementById('modifyEmail').value = employee.email;
+                    document.getElementById('modifyUsername').value = employee.username;
+                    document.getElementById('modifyPassword').value = employee.password;
+
+                    // Show the popup
+                    modifyPopup.style.display = 'block';
+                } else {
+                    console.error('Employee not found.');
+                }
+            })
+            .catch(error => console.error('Error fetching employee data:', error));
+    };
+
+    // Function to close the modify popup
+    closeBtn.addEventListener('click', function() {
+        modifyPopup.style.display = 'none';
+    });
+
+    // Handle form submission to update employee data
+    document.getElementById('modifyForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+
+        fetch('update_employee.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                alert('Employee updated successfully!');
+                modifyPopup.style.display = 'none';
+                fetchAllEmployees(); // Refresh the employee table
+            } else {
+                alert('Error updating employee.');
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    });
+
+    // Fetch all employees on page load
+    fetchAllEmployees();
+});
+
+
+
+        // JavaScript to handle the custom confirmation dialog
+        function confirmDelete(url) {
+        // Display the modal
+        var modal = document.getElementById('confirmDialog');
+        modal.style.display = "block";
+
+        // Get the buttons
+        var yesBtn = document.getElementById('confirmYes');
+        var noBtn = document.getElementById('confirmNo');
+
+        // If the user clicks "Yes", redirect to the delete URL
+        yesBtn.onclick = function() {
+            window.location.href = url;
+        }
+
+        // If the user clicks "No", close the modal
+        noBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // If the user clicks outside the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+            modal.style.display = "none";
+            }
+        }
+
+        return false; // Prevent default action
+        }
+    </script>
 </body>
 
 </html>

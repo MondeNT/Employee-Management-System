@@ -4,7 +4,36 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- Primary Meta Tags -->
-    <title>Admin Activity Logs</title>
+    <title>Volt Free Bootstrap Dashboard - Bootstrap Tables</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="title" content="Volt Free Bootstrap Dashboard - Bootstrap Tables">
+    <meta name="author" content="Themesberg">
+    <meta name="description" content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
+    <meta name="keywords" content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, themesberg, themesberg dashboard, themesberg admin dashboard" />
+    <link rel="canonical" href="https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://demo.themesberg.com/volt-pro">
+    <meta property="og:title" content="Volt Free Bootstrap Dashboard - Bootstrap Tables">
+    <meta property="og:description" content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
+    <meta property="og:image" content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-pro-bootstrap-5-dashboard/volt-pro-preview.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://demo.themesberg.com/volt-pro">
+    <meta property="twitter:title" content="Volt Free Bootstrap Dashboard - Bootstrap Tables">
+    <meta property="twitter:description" content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
+    <meta property="twitter:image" content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-pro-bootstrap-5-dashboard/volt-pro-preview.jpg">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="120x120" href="../../assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../../assets/img/favicon/safari-pinned-tab.svg" color="#ffffff">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- Sweet Alert -->
     <link type="text/css" href="../../vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
@@ -34,6 +63,7 @@
         .navbar,
         .bg-gray-800 {
             background: linear-gradient(180deg, #141318, #252526) !important;
+            /* Applies the gradient background */
         }
 
         .navbar-brand,
@@ -79,9 +109,13 @@
         .display-4 {
             color: #cecdd2;
             font-size: 2.5rem;
+            /* Adjust font size as needed */
             font-weight: bold;
+            /* Adjust font weight as needed */
             text-align: center;
+            /* Center align the "Log in" header */
             margin-bottom: 20px;
+            /* Add some bottom margin for spacing */
         }
 
         .lead {
@@ -112,19 +146,16 @@
             background: #fff;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
             border-radius: 10px;
-            transition: top 0ms ease-in-out 200ms,
-                opacity 200ms ease-in-out 0ms,
-                transform 200ms ease-in-out 0ms;
+            transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms, transform 200ms ease-in-out 0ms;
             z-index: 1000;
+            /* Ensure the popup is above other content */
         }
 
         .popup.active {
             top: 70%;
             opacity: 1;
             transform: translate(-50%, -50%) scale(1);
-            transition: top 0ms ease-in-out 0ms,
-                opacity 200ms ease-in-out 0ms,
-                transform 200mns ease-in-out 0ms;
+            transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms, transform 200ms ease-in-out 0ms;
         }
 
         .popup .close-btn {
@@ -143,13 +174,18 @@
 
         .popup .form {
             text-align: left;
+            /* Align form elements to the left */
         }
 
         .popup .form h2 {
             font-size: 2rem;
+            /* Adjust font size of the form header */
             color: #222;
+            /* Form header text color */
             text-align: center;
+            /* Center align the "Log in" header */
             margin-bottom: 20px;
+            /* Add some bottom margin for spacing */
         }
 
         .popup .form .form-element {
@@ -161,6 +197,7 @@
             color: #222;
             display: inline-block;
             width: 100px;
+            /* Adjust width as needed */
         }
 
         .popup .form .form-element input[type="text"],
@@ -251,20 +288,15 @@
             color: #252526;
         }
 
-        .nav-link.active,
-        .nav-link:hover {
+        .nav-item.active .nav-link {
             color: goldenrod !important;
         }
 
-        .nav-item .nav-link.active {
-            background-color: transparent !important;
-        }
-
-        .nav-item.active .nav-link {
-            background-color: #1b1c1f !important;
+        .nav-item.active .sidebar-icon svg {
             color: goldenrod !important;
         }
     </style>
+
 </head>
 
 <body>
@@ -274,8 +306,7 @@
     <nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse" data-simplebar>
         <div class="sidebar-inner px-4 pt-3">
             <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
-                <div class="d-flex align-items-center">
-                </div>
+                <div class="d-flex align-items-center"></div>
                 <div class="collapse-close d-md-none">
                     <a href="#sidebarMenu" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true" aria-label="Toggle navigation">
                         <svg class="icon icon-xs" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -301,17 +332,15 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="../../html&css/pages/edit-employees.html" target="_blank" class="nav-link d-flex justify-content-between">
+                    <a href="kanban.html" target="_blank" class="nav-link d-flex justify-content-between">
                         <span>
                             <span class="sidebar-icon">
-                                <span class="sidebar-icon">
-                                    <svg class="icon icon-xs me-2" fill="currentColor" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125"></path>
-                                    </svg>
-                                </span>
+                                <svg class="icon icon-xs me-2" fill="currentColor" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125"></path>
+                                </svg>
                             </span>
-                            <span class="sidebar-text">Edit Employee</span>
                         </span>
+                        <span class="sidebar-text">Edit Employee</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -336,16 +365,12 @@
                         <span class="sidebar-text">Statistics</span>
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a href="../../html&css/pages/Employees.html" class="nav-link">
                         <span class="sidebar-icon">
-                            <span class="sidebar-icon">
-                                <svg class="icon icon-xs me-2" fill="currentColor" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.
-
-008v.008H12v-.008Z"></path>
-                                </svg>
-                            </span>
+                            <svg class="icon icon-xs me-2" fill="currentColor" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z"></path>
+                            </svg>
                         </span>
                         <span class="sidebar-text">Current Employees</span>
                     </a>
@@ -365,135 +390,110 @@
     </nav>
 
     <main class="content">
-
         <header>
-
             <section>
                 <div class="container pt-5">
                     <div class="row align-items-center justify-content-center">
                         <div class="col-12 col-lg-6">
-                            <h1 class="display-4 fw-bold"><span class="font-goldenrod">Diamond Essence Eatery </span>Activity Dashboard</h1>
+                            <h1 class="display-4 fw-bold"><span class="font-goldenrod">Diamond Essence Eatery</span> Current Employees</h1>
                             <p class="lead pd-4 pt-2">
-                                Track user logins, clock-ins, and administrative updates in real-time for streamlined oversight and control.
+                                View and manage current employees, including their details and reports, here.
                             </p>
                         </div>
-
                         <div class="col-20 col-lg-5 mb-4">
-                            <img src="../../src/assets/img/pages/clicking.jpg" alt="Plate of food" class="img-fluid">
+                            <img src="../../src/pages/employeesWorking.webp" alt="Employees" class="img-fluid">
                         </div>
-
                     </div>
             </section>
         </header>
 
-        <div class="container my-4">
-            <h2 class="mb-3">Activity Logs</h2>
+        <div class="card border-0 shadow mb-4">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-centered table-nowrap mb-0 rounded">
+                        <thead class="thead-light">
+                            <tr>
+                                <th class="border-0 rounded-start">Name</th>
+                                <th class="border-0">Surname</th>
+                                <th class="border-0">Role</th> <!-- Adding Role -->
+                                <th class="border-0">Age</th>
+                                <th class="border-0">Phone</th>
+                                <th class="border-0">Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            // Database connection
+                            $servername = "localhost";
+                            $username = "root";
+                            $password = "";
+                            $dbname = "employee_management";
 
-            <!-- Logins and Logouts Table -->
-            <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Logins and Logouts</h6>
-                </div>
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-bordered" id="loginsLogoutsTable" width="100%" cellspacing="0">
-                            <thead>
-                                <tr>
-                                    <th>User</th>
-                                    <th>Action</th>
-                                    <th>Time</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>John Doe</td>
-                                    <td>Logged in</td>
-                                    <td>2024-07-20 08:30 AM</td>
-                                </tr>
-                                <tr>
-                                    <td>Michael Brown</td>
-                                    <td>Logged out</td>
-                                    <td>2024-07-20 09:00 AM</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+                            $conn = new mysqli($servername, $username, $password, $dbname);
 
-            <!-- Clock Ins and Outs Table -->
-            <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Clock Ins and Outs</h6>
-                </div>
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-bordered" id="clockInOutsTable" width="100%" cellspacing="0">
-                            <thead>
-                                <tr>
-                                    <th>User</th>
-                                    <th>Action</th>
-                                    <th>Time</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Jane Smith</td>
-                                    <td>Clocked in</td>
-                                    <td>2024-07-20 08:45 AM</td>
-                                </tr>
-                                <tr>
-                                    <td>Jane Smith</td>
-                                    <td>Clocked out</td>
-                                    <td>2024-07-20 05:00 PM</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+                            if ($conn->connect_error) {
+                                die("Connection failed: " . $conn->connect_error);
+                            }
 
-            <!-- Administrative Changes Table -->
-            <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Administrative Changes</h6>
-                </div>
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-bordered" id="adminChangesTable" width="100%" cellspacing="0">
-                            <thead>
-                                <tr>
-                                    <th>Admin</th>
-                                    <th>Change Made</th>
-                                    <th>Time</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Admin John</td>
-                                    <td>Added new user: Jane Doe</td>
-                                    <td>2024-07-20 10:15 AM</td>
-                                </tr>
-                                <tr>
-                                    <td>Admin Jane</td>
-                                    <td>Updated role for Michael</td>
-                                    <td>2024-07-20 11:00 AM</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                            // SQL query to join employees and users tables
+                            $sql = "SELECT employees.name, employees.surname, users.role, employees.age, employees.phone, employees.email 
+                                    FROM employees 
+                                    JOIN users ON employees.user_id = users.id";
+                            $result = $conn->query($sql);
+
+                            if ($result->num_rows > 0) {
+                                // Output data of each row
+                                while ($row = $result->fetch_assoc()) {
+                                    echo "<tr>";
+                                    echo "<td class='text-primary fw-bold'>" . $row["name"] . "</td>";
+                                    echo "<td class='text-primary fw-bold'>" . $row["surname"] . "</td>";
+                                    echo "<td>" . $row["role"] . "</td>"; // Display Role
+                                    echo "<td>" . $row["age"] . "</td>";
+                                    echo "<td>" . $row["phone"] . "</td>";
+                                    echo "<td>" . $row["email"] . "</td>";
+                                    echo "</tr>";
+                                }
+                            } else {
+                                echo "<tr><td colspan='6'>No employees found.</td></tr>";
+                            }
+
+                            $conn->close();
+                            ?>
+                        </tbody>
+                    </table>
+                    <div class="card-footer px-3 border-0 d-flex flex-column flex-lg-row align-items-center justify-content-between">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination mb-0">
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Previous</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">1</a>
+                                </li>
+                                <li class="page-item active">
+                                    <a class="page-link" href="#">2</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">3</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">4</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">5</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="fw-normal small mt-4 mt-lg-0">Showing <b>5</b> out of <b>25</b> entries</div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <footer>
-            <footer class="py-3 mt-auto">
-                <div class="container">
-                    <p class="text-center text-primary">© 2024 Diamond Essence Eatery</p>
-                </div>
-            </footer>
-        </footer>
     </main>
+
 
     <!-- Core -->
     <script src="../../vendor/@popperjs/core/dist/umd/popper.min.js"></script>
@@ -536,26 +536,6 @@
     <!-- Volt JS -->
     <script src="../../assets/js/volt.js"></script>
 
-    <script>
-        // Function to add active class based on current page
-        function setActiveNavItem() {
-            const navLinks = document.querySelectorAll('.nav-link');
-            const currentPage = window.location.pathname.split('/').pop();
-
-            navLinks.forEach(link => {
-                const linkPage = link.getAttribute('href').split('/').pop();
-                if (linkPage === currentPage) {
-                    link.classList.add('active');
-                    link.closest('.nav-item').classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                    link.closest('.nav-item').classList.remove('active');
-                }
-            });
-        }
-
-        setActiveNavItem();
-    </script>
 </body>
 
 </html>

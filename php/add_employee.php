@@ -48,5 +48,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error: " . $stmt_user->error;
     }
 }
+    if ($employee_added_successfully) {
+        header("Location: http://localhost/Employee%20Management%20System/html&css/pages/edit-employees.html");
+        exit();
+    } else {
+        // Optionally, you can display an error message or redirect to a different page
+        echo "Failed to add employee. Please try again.";
+    }
 $conn->close();
 ?>
